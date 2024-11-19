@@ -1,0 +1,92 @@
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 0 10px 0 10px;
+}
+.todoItem.completed {
+  border-color: #a75555;
+  opacity: 0.7;
+}
+
+.todoWrap {
+  margin-right: 6px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkboxLabel {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkboxLabel::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: 1px solid #a75555;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: 0.3s ease;
+}
+
+.checkbox:checked + .checkboxLabel::after {
+  display: block;
+}
+
+/* Стили для наведения */
+.checkboxLabel:hover {
+  border-color: #a75555;
+}
+
+.todoText {
+  flex-grow: 1;
+  color: #fff;
+  font-size: 18px;
+}
+
+.deleteButton {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.deleteButton svg {
+  width: 20px;
+  height: 20px;
+
+  transition: 0.3s ease;
+}
+
+.deleteButton:hover svg {
+  fill: #a75555;
+}
+
+.emptyList {
+  color: white;
+  font-size: 24px;
+
+  text-align: center;
+}

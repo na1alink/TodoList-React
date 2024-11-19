@@ -1,0 +1,61 @@
+.todoList {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 0 10px 0 10px;
+  color: white;
+}
+
+.todoText {
+  flex-grow: 1;
+}
+
+.todoActions {
+  display: flex;
+  gap: 10px;
+}
+
+.restoreButton,
+.deleteForeverButton,
+.clearTrashButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.restoreButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.deleteForeverButton {
+  background-color: #a75555;
+  color: white;
+}
+
+.clear {
+  display: flex;
+  justify-content: flex-end;
+}
+.clearTrashButton {
+  background-color: #a75555;
+  color: white;
+}
+
+.emptyTrash {
+  color: white;
+  font-size: 24px;
+
+  text-align: center;
+}

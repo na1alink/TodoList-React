@@ -1,0 +1,50 @@
+.container {
+  padding: 60px 100px;
+
+  border-radius: 20px;
+  border: 1px solid #bcb2b7;
+  background-color: #89848c;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sections__nav a:active {
+  color: #000;
+}
+.link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+.link:hover::after {
+  background-color: #5a7cb4;
+  width: 100%;
+}
+
+.activeLink::after {
+  width: 100%;
+  background-color: #5a7cb4;
+}
